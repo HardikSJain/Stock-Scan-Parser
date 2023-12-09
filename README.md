@@ -1,16 +1,31 @@
-# stock_scan_parser
+# Stock Market Scans Mobile App
 
-A new Flutter project.
+## Overview
 
-## Getting Started
+This mobile application provides a user-friendly interface for viewing stock market scans. The scans are loaded from a remote server, and each scan can have multiple sub-criteria. Sub-criteria can be either plain text or involve variable parameters, and the variable type/values are provided in the data.
 
-This project is a starting point for a Flutter application.
+## Functional Requirements
 
-A few resources to get you started if this is your first Flutter project:
+### 1. Stock Market Scans List
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Display a list view of stock market scans.
+- Each scan can have multiple sub-criteria.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 2. Sub-Criteria Display
+
+- Sub-criteria can be plain text or include variable parameters.
+- Variable types and values are provided in the data.
+
+### 3. Data Source
+
+- Fetch criteria data from [http://coding-assignment.bombayrunning.com/data.json](http://coding-assignment.bombayrunning.com/data.json).
+
+## Non-Functional Requirements
+
+### 1. Connectivity
+
+- The application should check the internet connection before making requests to the server.
+
+### 2. Server Status
+
+- Verify whether the server is up and responsive before making data requests.
