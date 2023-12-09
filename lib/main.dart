@@ -59,7 +59,8 @@ class _MyAppState extends State<MyApp> {
         duration: 3000,
         splash: const Icon(
           Icons.currency_rupee,
-          size: 25,
+          size: 70,
+          color: Colors.white,
         ),
         splashIconSize: 200,
         nextScreen: FutureBuilder<Widget>(
