@@ -4,6 +4,7 @@ import 'package:stock_scan_parser/constants/routes.dart';
 import 'package:stock_scan_parser/screens/backend_down_screen.dart';
 import 'package:stock_scan_parser/screens/no_internet.dart';
 import 'package:stock_scan_parser/screens/pages/home_page.dart';
+import 'package:stock_scan_parser/screens/pages/stock_scan_detail.dart';
 import 'package:stock_scan_parser/services/apiService.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
@@ -36,8 +37,16 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        scaffoldBackgroundColor: const Color(0xFF040D12),
+        appBarTheme: const AppBarTheme(
+          color: Colors.transparent,
+          elevation: 0,
+          titleTextStyle: TextStyle(
+            color: Colors.white,
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       debugShowCheckedModeBanner: false,
 
@@ -45,7 +54,7 @@ class _MyAppState extends State<MyApp> {
       home: AnimatedSplashScreen(
         duration: 3000,
         splash: const Icon(
-          Icons.local_hospital_rounded,
+          Icons.currency_rupee,
           size: 25,
         ),
         splashIconSize: 200,
@@ -72,6 +81,8 @@ class _MyAppState extends State<MyApp> {
       // routes
       routes: {
         homePageRoute: (context) => const HomePage(),
+        stockScanDetailRoute: (context) => StockScanDetail(
+            stockScan: ModalRoute.of(context)!.settings.arguments),
       },
     );
   }
