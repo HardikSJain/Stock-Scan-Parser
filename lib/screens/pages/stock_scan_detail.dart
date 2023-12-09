@@ -58,7 +58,7 @@ class StockScanDetail extends StatelessWidget {
                 stockScan: stockScan,
                 index: index,
               ),
-              itemCount: stockScan['criteria'].length,
+              itemCount: stockScan['criteria']?.length ?? 0,
             ),
           ),
         ],

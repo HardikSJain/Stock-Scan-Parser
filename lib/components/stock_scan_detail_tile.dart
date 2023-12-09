@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:stock_scan_parser/constants/routes.dart';
 
 class StockScanDetailTile extends StatelessWidget {
   const StockScanDetailTile({
@@ -56,7 +57,7 @@ class StockScanDetailTile extends StatelessWidget {
                   ..onTap = () {
                     Navigator.pushNamed(
                       context,
-                      '/variable-detail',
+                      variableDetailRoute,
                       arguments: {
                         "variable": variable,
                         "type": variable['type'],

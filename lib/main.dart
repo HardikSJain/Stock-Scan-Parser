@@ -5,6 +5,7 @@ import 'package:stock_scan_parser/screens/backend_down_screen.dart';
 import 'package:stock_scan_parser/screens/no_internet.dart';
 import 'package:stock_scan_parser/screens/pages/home_page.dart';
 import 'package:stock_scan_parser/screens/pages/stock_scan_detail.dart';
+import 'package:stock_scan_parser/screens/pages/variable_detail_page.dart';
 import 'package:stock_scan_parser/services/apiService.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
@@ -46,6 +47,9 @@ class _MyAppState extends State<MyApp> {
             fontSize: 18,
             fontWeight: FontWeight.bold,
           ),
+          iconTheme: IconThemeData(
+            color: Colors.white,
+          ),
         ),
       ),
       debugShowCheckedModeBanner: false,
@@ -75,7 +79,7 @@ class _MyAppState extends State<MyApp> {
           },
         ),
         splashTransition: SplashTransition.fadeTransition,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
       ),
 
       // routes
@@ -83,6 +87,15 @@ class _MyAppState extends State<MyApp> {
         homePageRoute: (context) => const HomePage(),
         stockScanDetailRoute: (context) => StockScanDetail(
             stockScan: ModalRoute.of(context)!.settings.arguments),
+        variableDetailRoute: (context) {
+          final arguments = ModalRoute.of(context)!.settings.arguments
+              as Map<String, dynamic>;
+          return VariableDeatil(
+            variable: arguments["variable"] as Map<String, dynamic>,
+            type: arguments["type"] as String,
+            title: arguments["title"] as String,
+          );
+        },
       },
     );
   }
