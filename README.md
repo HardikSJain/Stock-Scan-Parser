@@ -4,6 +4,11 @@
 
 This mobile application provides a user-friendly interface for viewing stock market scans. The scans are loaded from a remote server, and each scan can have multiple sub-criteria. Sub-criteria can be either plain text or involve variable parameters, and the variable type/values are provided in the data.
 
+Screen Recording: https://drive.google.com/drive/folders/1gCnFQISxtN6K8EPeYnUB0gOkfWWvvWIz
+
+Apk Download: https://mega.nz/folder/oLxi3QjB#56-UxogZ8oeaMFqvy5wwZw
+
+
 ## Functional Requirements
 
 ### 1. Stock Market Scans List
